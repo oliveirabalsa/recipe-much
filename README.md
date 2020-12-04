@@ -33,7 +33,7 @@ This API was built in order to return recipes through ingredients, it was made u
 
 ## Routes 
 
- /recipe
+ /recipes
  
  To get a recipe you need to enter min 1 ingredient and max 3
  
