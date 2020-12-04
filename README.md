@@ -37,7 +37,7 @@ This API was built in order to return recipes through ingredients, it was made u
  
  To get a recipe you need to enter min 1 ingredient and max 3
  
- request example: http://localhost:3000/recipes?i=garlic
+ request example: **@GET** http://localhost:3000/recipes?i=garlic
  
  response example:
  ```
