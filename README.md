@@ -5,7 +5,7 @@
 <p align="center">
   <a href="#-Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-How-to-use">How to contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-How-to-use">How to use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-license">License</a>
 </p>
 
@@ -21,7 +21,7 @@ This project was developed with the following technologies:
 
 ## 💻 Project
 
-This is ***My Portfolio***, is a Project that **use the HTML5, CSS and Javascript**. For long time ago, I don't use this technologies without framework, so I decided to make this for training purposes. Made with **HTML5**, **CSS**, **JavaScript**.
+This API was built in order to return recipes through ingredients, it was made using **Node.js**, **Nest.js**, **Typescript** and **Docker**..
 
 ## 🤔 How to use
 
