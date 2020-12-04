@@ -1,42 +1,20 @@
+import { Ingredients } from './interfaces/ingredients';
 import {
+  CacheInterceptor,
   Controller,
   Get,
-  Post,
-  Body,
-  Put,
-  Param,
-  Delete,
+  Query,
+  UseInterceptors,
 } from '@nestjs/common';
-import { RecipesService } from './recipes.service';
-import { CreateRecipeDto } from './dto/create-recipe.dto';
-import { UpdateRecipeDto } from './dto/update-recipe.dto';
+import { RecipesService } from './services/recipes.service';
 
 @Controller('recipes')
 export class RecipesController {
   constructor(private readonly recipesService: RecipesService) {}
 
-  @Post()
-  create(@Body() createRecipeDto: CreateRecipeDto) {
-    return this.recipesService.create(createRecipeDto);
-  }
-
+  @UseInterceptors(CacheInterceptor)
   @Get()
-  findAll() {
-    return this.recipesService.findAll();
-  }
-
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.recipesService.findOne(+id);
-  }
-
-  @Put(':id')
-  update(@Param('id') id: string, @Body() updateRecipeDto: UpdateRecipeDto) {
-    return this.recipesService.update(+id, updateRecipeDto);
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.recipesService.remove(+id);
+  findAll(@Query() params: Ingredients) {
+    return this.recipesService.findAll(params);
   }
 }

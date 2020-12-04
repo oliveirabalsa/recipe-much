@@ -52,7 +52,7 @@ export class RecipesService {
 
     const ingredients = i.split(',');
 
-    const finalResponse: RecipeModel[] = giphyResponse.map((response) => {
+    const recipeResponse: RecipeModel[] = giphyResponse.map((response) => {
       const { title, href, ingredients } = response.recipe;
 
       const titleWithoutCharacters = String(title).trim();
@@ -68,7 +68,7 @@ export class RecipesService {
     });
     return {
       keywords: ingredients,
-      recipes: finalResponse,
+      recipes: recipeResponse,
     };
   }
 }
