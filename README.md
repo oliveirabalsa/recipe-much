@@ -61,7 +61,7 @@ This API was built in order to return recipes through ingredients, it was made u
  ```
  
  OBS: The API has cache control, from the second request you will notice that the response will be faster.
-  Validations were also added if the user sends points, semicolons and improper spaces
+  Validations were also added if the user sends dots, semicolons and improper spaces
 
 ## :memo: License
 
