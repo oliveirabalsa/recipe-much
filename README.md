@@ -1,73 +1,72 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
+	<h1 align="center">Recipe Much :page_facing_up: :tm:</h1>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
+<p align="center">
+  <a href="#-Technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-How-to-use">How to use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-license">License</a>
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 🚀 Technologies
 
-## Installation
+This project was developed with the following technologies:
 
-```bash
-$ npm install
-```
+- [Node.js](https://nodejs.org/en/)
+- [Nest](https://nestjs.com/)
+- [Docker](https://www.docker.com/)
+- [Typescript](https://www.typescriptlang.org/)
 
-## Running the app
+## 💻 Project
 
-```bash
-# development
-$ npm run start
+This API was built in order to return recipes through ingredients, it was made using **Node.js**, **Nest.js**, **Typescript** and **Docker**..
 
-# watch mode
-$ npm run start:dev
+## 🤔 How to use
 
-# production mode
-$ npm run start:prod
-```
+- Make a fork;
+- Set an .env file with Giphy credentials(.env.example has a for you test)
+- Install nest.js dependencies: `npm install`;
+- Run docker: `docker-compose up'`;
+- Connect in localhost: `http://localhost:3000`.
 
-## Test
+## Routes 
 
-```bash
-# unit tests
-$ npm run test
+ /recipes
+ 
+ To get a recipe you need to enter min 1 ingredient and max 3
+ 
+ request example: **@GET** http://localhost:3000/recipes?i=garlic
+ 
+ response example:
+ ```
+ {
+    "keywords": [
+        "garlic"
+    ],
+    "recipes": [
+        {
+            "title": "Garlic Dijon Grilling Sauce",
+            "ingredients": "garlic, dijon mustard",
+            "link": "http://www.kraftfoods.com/kf/recipes/garlic-dijon-grilling-sauce-56449.aspx",
+            "gif": "https://giphy.com/gifs/cooking-Q4PcMC8apFXBm"
+        },
+        {
+            "title": "Bruschetta With Roasted Garlic and Cherry Tomatoes",
+            "ingredients": "garlic, italian bread",
+            "link": "http://www.recipezaar.com/Bruschetta-With-Roasted-Garlic-and-Cherry-Tomatoes-244281",
+            "gif": "https://giphy.com/gifs/cherry-quadcopter-chopping-HQyRzRVrJnT6U"
+        },
+ ```
+ 
+ OBS: The API has cache control, from the second request you will notice that the response will be faster.
+  Validations were also added if the user sends points, semicolons and improper spaces
 
-# e2e tests
-$ npm run test:e2e
+## :memo: License
 
-# test coverage
-$ npm run test:cov
-```
+This project is under License MIT. See the documentation [LICENSE](LICENSE) for more details.
 
-## Support
+---
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+<p align="center">Developed by <a href="https://www.linkedin.com/in/leonardo-balsalobre/">Leonardo Balsalobre</a> :copyright:
